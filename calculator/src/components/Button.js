@@ -35,7 +35,7 @@ export default props => {
     if (props.operation) stylesButton.push(styles.operationButton)
 
     return(
-        <TouchableOpacity onPress={props.onClick}>
+        <TouchableOpacity onPress={() => props.onClick(props.label)}>
             <Text style={stylesButton}>
                 {props.label}
             </Text>
